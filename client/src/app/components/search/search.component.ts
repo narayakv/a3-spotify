@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   searchString:string;
   searchCategory:string = 'artist';
   searchCategories:string[] = ['artist', 'album', 'track'];
-  resources:ResourceData[];
+  resources:ResourceData[] | undefined;
 
   constructor(private spotifyService:SpotifyService) { }
 
@@ -24,6 +24,9 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
+    // Clear previous results so the carousel is recreated
+    this.resources = undefined;
+    
     // call the Spotify service to get search results
     this.spotifyService.searchFor(this.searchCategory, this.searchString).then((data) => {
       this.resources = data;
