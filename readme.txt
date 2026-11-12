@@ -18,6 +18,7 @@ Around 18 hours
 
 3. What online resources did you consult when completing this assignment? (list specific URLs)
 
+https://chatgpt.com/
 I used AI, ChatGPT for guidance on Angular components, particularly with binding. I also used it 
 to help with debugging and reviewing my code.
 
